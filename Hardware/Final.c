@@ -247,18 +247,18 @@ void Dog_Swing(void)//Ò¡°Ú×ËÌ¬
 
 void Dog_Down(void)
 {
-	Servo_L_F(180);
-	Servo_L_B(180);
-	Servo_R_F(0);
-	Servo_R_B(0);
+	Servo_L_F(0);
+	Servo_L_B(0);
+	Servo_R_F(180);
+	Servo_R_B(180);
 }
 
 void Dog_Sit(void)
 {
 	Servo_L_F(90);
-	Servo_L_B(180);
+	Servo_L_B(0);
 	Servo_R_F(90);
-	Servo_R_B(0);
+	Servo_R_B(180);
 }
 
 void RE_ALL(void)//»Ö¸´±íÇé¡¢×ËÌ¬
