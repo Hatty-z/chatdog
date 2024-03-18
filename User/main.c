@@ -1,22 +1,27 @@
 #include "stm32f10x.h"                  // Device header
 #include "Delay.h"
-#include "LED.h"
-#include "Key.h"
 #include "OLED.h"
 #include "Servo.h"
+#include "Serial.h"
+#include "NRF24L01.h"
+#include "Nrf24L01_Ins.h"
+#include "Final.h"
 
-uint16_t Num;
-uint8_t i;
+float Angle;
+uint16_t RxData;
+/*
+   01 前进；02 后退；03 左转；
+   04 右转；05 招手；06 摇摆；
+   07 坐下；08 趴下；09 停止；
+   */
 
 int main(void)
-{
-	LED_Init ();
-	Key_Init ();
-	OLED_Init();
-	Servo_Init();
+{   
+	Final_Init();
+	Start_up();    //开机动画
 	
 	while(1)
-	{
-
+	{   
+         Final();
 	}
 }

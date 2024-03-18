@@ -29,7 +29,10 @@
 .\objects\main.o: .\Library\stm32f10x_wwdg.h
 .\objects\main.o: .\Library\misc.h
 .\objects\main.o: .\System\Delay.h
-.\objects\main.o: .\Hardware\LED.h
-.\objects\main.o: .\Hardware\Key.h
 .\objects\main.o: .\Hardware\OLED.h
 .\objects\main.o: .\Hardware\Servo.h
+.\objects\main.o: .\Hardware\Serial.h
+.\objects\main.o: D:\keil 5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: .\Hardware\NRF24L01.h
+.\objects\main.o: .\Hardware\Nrf24L01_Ins.h
+.\objects\main.o: .\Hardware\Final.h

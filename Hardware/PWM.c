@@ -20,8 +20,8 @@ void PWM_Init(void)
 	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;
 	TIM_TimeBaseInitStruct.TIM_ClockDivision=TIM_CKD_DIV1;
 	TIM_TimeBaseInitStruct.TIM_CounterMode=TIM_CounterMode_Up;
-	TIM_TimeBaseInitStruct.TIM_Period=2000-1;
-	TIM_TimeBaseInitStruct.TIM_Prescaler=720-1;
+	TIM_TimeBaseInitStruct.TIM_Period=20000-1;//ARR
+	TIM_TimeBaseInitStruct.TIM_Prescaler=72-1;//PSC
 	TIM_TimeBaseInitStruct.TIM_RepetitionCounter=0;
 	TIM_TimeBaseInit(TIM2 ,&TIM_TimeBaseInitStruct);
 	
@@ -30,7 +30,7 @@ void PWM_Init(void)
 	TIM_OCInitStruct.TIM_OCMode=TIM_OCMode_PWM1;
 	TIM_OCInitStruct.TIM_OCPolarity=TIM_OCPolarity_High;
 	TIM_OCInitStruct.TIM_OutputState=TIM_OutputState_Enable;
-	TIM_OCInitStruct.TIM_Pulse=0;
+	TIM_OCInitStruct.TIM_Pulse=0;//CCR
 	TIM_OC1Init(TIM2,&TIM_OCInitStruct);
 	TIM_OC2Init(TIM2,&TIM_OCInitStruct);
 	TIM_OC3Init(TIM2,&TIM_OCInitStruct);
